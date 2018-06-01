@@ -1,0 +1,37 @@
+  <!-- <h1>{{name | uppercase }}</h1>
+  <h1>{{name | lowercase}}</h1>
+  <h1>{{day}}</h1>
+  <h1>day | date</h1>
+  <h1>date | date:'shortDate'</h1>
+  <h1>date | date:'fullDate'</h1> -->
+<!-- {{arr | sort}}  -->
+
+<!-- Template Driven form -->
+<!-- <form class="container" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <input type="text" class="form-control" name="firstname" placeholder="Firstname" ngModel>
+  <hr>
+  <input type="text" class="form-control" name="lastname" placeholder="Lastname" ngModel>
+  <hr>
+  <select class="btn btn-info btn-lg dropdown-toggle" name="language" ngModel>
+    <option value="C++">C++</option>
+    <option value="Java">Java</option>
+    <option value="C">C</option>
+  </select>
+  <hr>
+  <input type="submit" class="btn btn-info" value="Sumbit">
+</form> -->
+
+<!-- Module Driven Form -->
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <input type="text" class="form-control" name="firstname" placeholder="Firstname" FormControlName="firstname">
+  <hr>
+  <input type="text" class="form-control" name="lastname" placeholder="Lastname" FormControlName="lastname">
+  <hr>
+  <select class="btn btn-info btn-lg dropdown-toggle" name="language" FormControlName="language">
+    <option value="C++">C++</option>
+    <option value="Java">Java</option>
+    <option value="C">C</option>
+  </select>
+  <hr>
+  <input type="submit" class="btn btn-info" value="Sumbit">
+</form>
