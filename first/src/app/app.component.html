@@ -1,0 +1,44 @@
+<!-- <div class="container">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <a routerLink="/member">Member</a>
+  <br>
+  <a routerLink="/product">Product</a>
+  <br>
+
+  <router-outlet></router-outlet>
+
+  <h3 *ngIf="isFalse; then firstTemp else otherTemp">Value is true</h3>
+
+<ng-template #firstTemp>This is first text</ng-template>
+<ng-template #otherTemp>This is other text</ng-template>
+
+  <p>{{obj.name}} and {{obj.id}}</p>
+
+  <ul>
+    <li *ngFor='let item of myArr'>{{item}}</li>
+  </ul>
+
+</div> -->
+
+
+<div class="main container md-8">
+  <div class="bg-info text-white p-4">
+    <h1>Item's List</h1>
+  </div>
+  <hr>
+  <div class="add-item">
+    <input [(ngModel)]="newItem" placeholder="Add Item" class="add-text m-3">
+    <button (click) = "pushItem()" class="btn btn-outline-info">Add</button>
+  </div>
+  <ul class="text-monospace text-info">
+    <li *ngFor = "let i of Items; let ind = index">
+        {{i}}
+      <button (click)="removeItem(ind)" type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+  </ul>
+</div>
